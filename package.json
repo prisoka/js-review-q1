@@ -1,0 +1,23 @@
+{
+  "name": "js-review-q1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-crazy-88s/js-review-q1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-crazy-88s/js-review-q1/issues"
+  },
+  "homepage": "https://github.com/the-crazy-88s/js-review-q1#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
+  }
+}
