@@ -20,56 +20,127 @@ function subtract(num1,num2){
   return num1-num2;
 }
 
-//ANNOTATE HERE
-function calculateSum(array){
-  //WRITE YOUR CODE HERE
+/**
+ * @name: calculateSum
+ * @description calculate the sum of all numbers in array
+ * @param1: array
+ * @return: number
+ **/
+ function calculateSum(array){
+   let sum = 0;
+
+   for(let i = 0; i < array.length; i++){
+     let num = array[i];
+     sum += num;
+   }
+   return sum;
+ }
+
+/**
+* @name - map
+* @description -
+* @param -
+* @param -
+* @return - 
+**/
+function map(){
+
 }
+//map([1,2,3],3)  => [3,6,9]
+//map([2,3,4],-2) => [-4,-6,-8]
 
-//don't look up the answer!
-function forEach(){
-
-}
-
+/**
+ * @name: filter
+ * @description
+ * @param1:
+ * @param2:
+ * @return: a new collection with filtered elements
+ **/
 function filter(){
 
 }
 
+/**
+ * @name: reverseLettersInPlace
+ * @description:
+ * @param1: string
+ * @return: reversed words of a string
+ **/
 function reverseLettersInPlace(){
 
 }
 //reverseLettersInPlace("Hi justin") => "iH nitsuj"
 //reverseLettersInPlace(" A simple challenge! ") => => " A elpmis !egnellahc "
 
+/**
+ * @name: allSimpleCombinations
+ * @description
+ * @param1:
+ * @param2:
+ * @return:
+ **/
 function allSimpleCombinations(){
 
 }
 //allSimpleCombinations('cat')  => ['c','ca','cat','a','at','t']
 //allSimpleCombinations('talk') => ['t','ta','tal','talk','a','al','alk','l','lk','k'];
 
+/**
+ * @name: alphabeticalOrder
+ * @description
+ * @param1:
+ * @param2:
+ * @return:
+ **/
 function alphabeticalOrder(){
 
 }
 //alphabeticalOrder('talk') => 'aklt'
 //alphabeticalOrder('sailormoon')  => 'ailmnooors'
 
+/**
+ * @name: returnLongestWord
+ * @description
+ * @param1:
+ * @param2:
+ * @return:
+ **/
 function returnLongestWord(){
 
 }
 //returnLongestWord('short sentence alphabetical') => 'alphabetical'
 //returnLongestWord('cute pretty beautiful pulchritudinous') => 'pulchritudinous'
 
+/**
+ * @name: isPrime
+ * @description return true is the number is prime
+ * @param1: num
+ * @return: boolean
+ **/
 function isPrime(){
 
 }
 //isPrime(7)  => true
 //isPrime(12) => false
 
+/**
+ * @name: returnCoinBreakdown
+ * @description
+ * @param1: num
+ * @return: object
+ **/
 function returnCoinBreakdown(){
 
 }
 //returnCoinBreakdown(46) => {25:1,10:1,5:2,1:1}
 //returnCoinBreakdown(19) => {25:0,10:1,5:1,1:4}
 
+/**
+ * @name: countVowels
+ * @description returns the number of vowels in a str
+ * @param1: string
+ * @return: number
+ **/
 function countVowels(){
 
 }
@@ -79,5 +150,14 @@ function countVowels(){
 module.exports = {
   add:add,
   subtract:subtract,
-  //add your functions here
+  calculateSum:calculateSum,
+  forEach:forEach,
+  filter:filter,
+  reverseLettersInPlace:reverseLettersInPlace,
+  allSimpleCombinations:allSimpleCombinations,
+  alphabeticalOrder:alphabeticalOrder,
+  returnLongestWord:returnLongestWord,
+  isPrime:isPrime,
+  returnCoinBreakdown:returnCoinBreakdown,
+  countVowels:countVowels
 }
