@@ -49,8 +49,8 @@ function allSimpleCombinations(){
 function alphabeticalOrder(){
 
 }
-//allSimpleCombinations('talk') => ''
-//allSimpleCombinations('sailormoon')  => 'ailmnooors'
+//alphabeticalOrder('talk') => 'aklt'
+//alphabeticalOrder('sailormoon')  => 'ailmnooors'
 
 function returnLongestWord(){
 
