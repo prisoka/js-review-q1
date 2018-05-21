@@ -41,7 +41,7 @@ function subtract(num1,num2){
 * @description -
 * @param -
 * @param -
-* @return - 
+* @return -
 **/
 function map(){
 
@@ -147,11 +147,16 @@ function countVowels(){
 //countVowels('apple')  => 2
 //countVowels('tomato') => 3
 
+// BONUS //
+function forEach(){
+
+}
+
 module.exports = {
   add:add,
   subtract:subtract,
   calculateSum:calculateSum,
-  forEach:forEach,
+  map:map,
   filter:filter,
   reverseLettersInPlace:reverseLettersInPlace,
   allSimpleCombinations:allSimpleCombinations,
