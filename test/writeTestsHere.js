@@ -46,12 +46,12 @@ describe('all tests for your functions',()=>{
       assert.equal(sumFunc([]), 0);
     });
 
-    it('should return sum of positive numbers',()=>{
+    it('should return sum of positive numbers',() =>{
       assert.equal(sumFunc([12,3]),15);
       assert.equal(sumFunc([5,5]),10);
     });
 
-    it('should return sum of negative numbers',()=>{
+    it('should return sum of negative numbers',() =>{
       assert.equal(sumFunc([-1,-1]),-2);
       assert.equal(sumFunc([-7,-3]),-10);
     });
@@ -128,5 +128,12 @@ describe('all tests for your functions',()=>{
   //returnCoinBreakdown
 
   //countVowels
+  describe('countVowels tests', () => {
+    const vowelsNumFunc = allFunctions.countVowels;
+
+    it('should output number', () => {
+      assert.isNumber(vowelsNumFunc('banana',6));
+    });
+  })
 
 })

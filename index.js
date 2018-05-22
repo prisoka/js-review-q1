@@ -140,8 +140,15 @@ function returnCoinBreakdown(){
  * @param1: string
  * @return: number
  **/
-function countVowels(){
+function countVowels(str){
+ let counter = 0;
 
+ for (let i =0; i < str.length; i++){
+  if(str.charAt(i) === 'a' || str.charAt(i) === 'e' || str.charAt(i) === 'i' || str.charAt(i) === 'o' || str.charAt(i) === 'u'){
+    counter += 1;
+  }
+ }
+ return counter;
 }
 //countVowels('apple')  => 2
 //countVowels('tomato') => 3
