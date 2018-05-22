@@ -98,11 +98,11 @@ describe('all tests for your functions',()=>{
     const reverseFunc = allFunctions.reverseLettersInPlace;
 
     it('should reverse the given str with words in the same place', () => {
-      assert.equal(reverseFunc('hello world', 'olleh dlrow'));
+      assert.reverseOf(reverseFunc('hello world', 'olleh dlrow'));
     })
 
     it('should output a string', () => {
-      assert.equal(reverseFunc('banana and apple', 'ananab dna elppa'));
+      assert.reverseOf(reverseFunc('banana and apple', 'ananab dna elppa'));
     });
   })
 
@@ -130,6 +130,10 @@ describe('all tests for your functions',()=>{
   //countVowels
   describe('countVowels tests', () => {
     const vowelsNumFunc = allFunctions.countVowels;
+
+    it('should return 0 if str is empty', () => {
+      assert.equal(vowelsNumFunc('', 0));
+    });
 
     it('should output number', () => {
       assert.isNumber(vowelsNumFunc('banana',6));
