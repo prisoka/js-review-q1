@@ -56,7 +56,7 @@ function map(){
  * @param2:
  * @return: a new collection with filtered elements
  **/
-function filter(){
+function filter(arr){
 
 }
 
@@ -99,14 +99,22 @@ function allSimpleCombinations(){
 
 /**
  * @name: returnLongestWord
- * @description
- * @param1:
- * @param2:
- * @return:
+ * @description: return the longest word in a given string
+ * @param1: string
+ * @return: string
  **/
-function returnLongestWord(){
-
-}
+ function returnLongestWord(string) {
+   let str = string.split(" ");
+   let longest = 0;
+   let word = null;
+   for (let i = 0; i < str.length; i++) {
+     if (longest < str[i].length) {
+       longest = str[i].length;
+       word = str[i];
+     }
+   }
+   return word;
+ }
 //returnLongestWord('short sentence alphabetical') => 'alphabetical'
 //returnLongestWord('cute pretty beautiful pulchritudinous') => 'pulchritudinous'
 

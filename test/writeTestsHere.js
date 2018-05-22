@@ -122,8 +122,20 @@ describe('all tests for your functions',()=>{
   })
 
   //returnLongestWord
+  describe('returnLongestWord tests', () => {
+    const longestWordFunc = allFunctions.returnLongestWord;
+
+    it('should return string', () => {
+      assert.equal(longestWordFunc('oranges and apples'), 'oranges');
+    });
+  })
 
   //isPrime
+  describe('isPrime  tests', () => {
+    it('should return an array', () => {
+
+    });
+  })
 
   //returnCoinBreakdown
 
