@@ -62,13 +62,13 @@ function filter(){
 
 /**
  * @name: reverseLettersInPlace
- * @description:
+ * @description: reversed letters of a string in place
  * @param1: string
- * @return: reversed words of a string
+ * @return: reversed words of a string in place
  **/
-function reverseLettersInPlace(){
-
-}
+ function reverseLettersInPlace(str){
+   return str.split('').reverse().join('').split(' ').reverse().join(' ');
+ }
 //reverseLettersInPlace("Hi justin") => "iH nitsuj"
 //reverseLettersInPlace(" A simple challenge! ") => => " A elpmis !egnellahc "
 
@@ -87,14 +87,13 @@ function allSimpleCombinations(){
 
 /**
  * @name: alphabeticalOrder
- * @description
- * @param1:
- * @param2:
- * @return:
+ * @description: return the given str in alphabetical order
+ * @param1: str
+ * @return: string
  **/
-function alphabeticalOrder(){
-
-}
+ function alphabeticalOrder(str){
+   return str.split('').sort().join('');
+ }
 //alphabeticalOrder('talk') => 'aklt'
 //alphabeticalOrder('sailormoon')  => 'ailmnooors'
 

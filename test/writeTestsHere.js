@@ -26,11 +26,13 @@ describe('all tests for your functions',()=>{
     it('should subtract positive numbers',()=>{
       assert.equal(subFunc(1,3),-2);
       assert.equal(subFunc(100,87),13);
-    })
+    });
+
     it('should subtract negative numbers',()=>{
       assert.equal(subFunc(-1,-3),2)
       assert.equal(subFunc(-39,-11),-28)
-    })
+    });
+
     it('should output number',()=>{
       assert.isNumber(subFunc(8,1));
     });
@@ -42,45 +44,25 @@ describe('all tests for your functions',()=>{
 
     it('should return zero if array is empty', () => {
       assert.equal(sumFunc([]), 0);
-    })
+    });
+
+    it('should return sum of positive numbers',()=>{
+      assert.equal(sumFunc([12,3]),15);
+      assert.equal(sumFunc([5,5]),10);
+    });
+
+    it('should return sum of negative numbers',()=>{
+      assert.equal(sumFunc([-1,-1]),-2);
+      assert.equal(sumFunc([-7,-3]),-10);
+    });
 
     it('should output number', () => {
-      assert.isNumber(sumFunc(10,10));
-    })
+      assert.isNumber(sumFunc([10,10]));
+    });
   })
 
-  //forEach
-  describe('forEach tests', () => {
-
-    it('should iterate on each character of a string', () => {
-      let iterated = '';
-
-      array.forEach('pizza', function(val, i, string) {
-        iterated += val;
-      });
-
-      assert.deepEqual(iterated, 'pizza');
-    })
-
-    it('should iterate on each element of an array', function() {
-      var iterated = [];
-
-      array.forEach([1,2,3,4], function(val, i, array) {
-        iterated.push(val);
-      });
-
-      assert.deepEqual(iterated, [1,2,3,4]);
-    });
-
-    it('should iterate on each element of an object', function() {
-      var iterated = [];
-
-      array.forEach({a: 1, b: 2, c: 3}, function(val, key, obj) {
-        iterated.push(val);
-      });
-
-      assert.deepEqual(iterated, [1, 2, 3]);
-    });
+  //map
+  describe('map tests', () => {
 
   })
 
@@ -95,7 +77,7 @@ describe('all tests for your functions',()=>{
     });
 
     it('should iterate on each element of an array', function() {
-      var filteredArray = array.filter([1,2,3,4], function(val, i, array) {
+      let filteredArray = array.filter([1,2,3,4], function(val, i, array) {
         return (val % 2) === 0;
       });
 
@@ -103,7 +85,7 @@ describe('all tests for your functions',()=>{
     });
 
     it('should iterate on each element of an object', function() {
-      var filteredArray = object.filter({a: 1, b: 2, c: 3}, function(val, key, obj) {
+      let filteredArray = object.filter({a: 1, b: 2, c: 3}, function(val, key, obj) {
         return (val % 2) === 1;
       });
 
@@ -115,16 +97,29 @@ describe('all tests for your functions',()=>{
   describe('reverseLettersInPlace tests', () => {
     const reverseFunc = allFunctions.reverseLettersInPlace;
 
-    it('should return a string', () => {
-      
+    it('should reverse the given str with words in the same place', () => {
+      assert.equal(reverseFunc('hello world', 'olleh dlrow'));
     })
 
-    it('should return ')
+    it('should output a string', () => {
+      assert.equal(reverseFunc('banana and apple', 'ananab dna elppa'));
+    });
   })
 
   //allSimpleCombinations
 
   //alphabeticalOrder
+  describe('alphabeticalOrder tests', () => {
+    const alphOrderFunc = allFunctions.alphabeticalOrder;
+
+    it('should output string in alphabetical order',() =>{
+      assert.equal(alphOrderFunc('azcb','abcz'));
+    });
+
+    it('should output a string', () => {
+      assert.equal(alphOrderFunc('walk', 'aklw'));
+    });
+  })
 
   //returnLongestWord
 
