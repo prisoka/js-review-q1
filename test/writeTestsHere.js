@@ -98,11 +98,11 @@ describe('all tests for your functions',()=>{
     const reverseFunc = allFunctions.reverseLettersInPlace;
 
     it('should reverse the given str with words in the same place', () => {
-      assert.reverseOf(reverseFunc('hello world', 'olleh dlrow'));
+      assert.equal(reverseFunc('hello world'), 'olleh dlrow');
     })
 
     it('should output a string', () => {
-      assert.reverseOf(reverseFunc('banana and apple', 'ananab dna elppa'));
+      assert.equal(reverseFunc('banana and apple'), 'ananab dna elppa');
     });
   })
 
@@ -113,11 +113,11 @@ describe('all tests for your functions',()=>{
     const alphOrderFunc = allFunctions.alphabeticalOrder;
 
     it('should output string in alphabetical order',() =>{
-      assert.equal(alphOrderFunc('azcb','abcz'));
+      assert.equal(alphOrderFunc('azcb'),'abcz');
     });
 
     it('should output a string', () => {
-      assert.equal(alphOrderFunc('walk', 'aklw'));
+      assert.equal(alphOrderFunc('walk'), 'aklw');
     });
   })
 
@@ -132,11 +132,11 @@ describe('all tests for your functions',()=>{
     const vowelsNumFunc = allFunctions.countVowels;
 
     it('should return 0 if str is empty', () => {
-      assert.equal(vowelsNumFunc('', 0));
+      assert.equal(vowelsNumFunc(''), 0);
     });
 
     it('should output number', () => {
-      assert.isNumber(vowelsNumFunc('banana',6));
+      assert.isNumber(vowelsNumFunc('banana'),6);
     });
   })
 
