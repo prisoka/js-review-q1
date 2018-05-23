@@ -73,10 +73,9 @@ function map(arr, num){
 
 /**
  * @name: allSimpleCombinations
- * @description
- * @param1:
- * @param2:
- * @return:
+ * @description:
+ * @param1: str
+ * @return: array
  **/
 function allSimpleCombinations(){
 
@@ -141,11 +140,11 @@ function allSimpleCombinations(){
 
 /**
  * @name: returnCoinBreakdown
- * @description
+ * @description: returns and object with how many of each coin the given number fits
  * @param1: num
  * @return: object
  **/
-function returnCoinBreakdown(){
+function returnCoinBreakdown(num){
 
 }
 //returnCoinBreakdown(46) => {25:1,10:1,5:2,1:1}

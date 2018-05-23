@@ -1,5 +1,10 @@
-const assert = require('chai').assert;
 const allFunctions = require('../index');
+const assert = require('chai').assert;
+
+// In case I wanted to use a different chai library:
+// const should = require('chai').should;
+// const expect = require('chai').expect;
+
 
 describe('all tests for your functions',()=>{
 
@@ -101,6 +106,17 @@ describe('all tests for your functions',()=>{
   })
 
   //allSimpleCombinations
+  describe('allSimpleCombinations tests', () => {
+    const simpleCombinations = allFunctions.allSimpleCombinations;
+
+    it('should return ...', () => {
+
+    });
+
+    it('should return ...', () => {
+
+    });
+  })
 
   //alphabeticalOrder
   describe('alphabeticalOrder tests', () => {
@@ -138,6 +154,17 @@ describe('all tests for your functions',()=>{
   })
 
   //returnCoinBreakdown
+  describe('returnCoinBreakdown tests', (){
+    const coinBreakdown = allFunctions.returnCoinBreakdown;
+
+    it('should return ...', () => {
+
+    });
+
+    it('should return ...', () => {
+
+    });
+  })
 
   //countVowels
   describe('countVowels tests', () => {
