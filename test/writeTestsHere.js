@@ -63,33 +63,27 @@ describe('all tests for your functions',()=>{
 
   //map
   describe('map tests', () => {
+    const mapFunc = allFunctions.map;
 
+    it('should return an array of numbers', () => {
+      assert.deepEqual(mapFunc([1,2,3],2), ([2,4,6]));
+    });
   })
 
   //filter
   describe('filter tests', () => {
-    it('should iterate on each character of a string', function() {
-      let filteredArray = string.filter('pizza', function(val, i, array) {
-        return val === 'z';
-      });
+    const filterFunc = allFunctions.filter;
 
-      assert.deepEqual(filteredArray, ['z', 'z']);
+    it('should return empty array if element length is < 4', function (){
+      assert.deepEqual(filterFunc(['zap', 'abc']), ([]))
     });
 
-    it('should iterate on each element of an array', function() {
-      let filteredArray = array.filter([1,2,3,4], function(val, i, array) {
-        return (val % 2) === 0;
-      });
-
-      assert.deepEqual(filteredArray, [2, 4]);
+    it('should iterate on each character of an array', function (){
+      assert.deepEqual(filterFunc(['pizza', 'zap', 'abc']), (['pizza']))
     });
 
-    it('should iterate on each element of an object', function() {
-      let filteredArray = object.filter({a: 1, b: 2, c: 3}, function(val, key, obj) {
-        return (val % 2) === 1;
-      });
-
-      assert.deepEqual(filteredArray, [1, 3]);
+    it('should return a new array with filtered elements', function() {
+      assert.deepEqual(filterFunc(['pizza', 'banana', 'abc']), (['pizza','banana']));
     });
   })
 

@@ -38,27 +38,26 @@ function subtract(num1,num2){
 
 /**
 * @name - map
-* @description -
-* @param -
-* @param -
-* @return -
+* @description - returns a new array with the results of calling a provided function on every element in the calling array.
+* @param - array
+* @param - number
+* @return - array
 **/
-function map(){
-
+function map(arr, num){
+  return arr.map(element => element * num);
 }
 //map([1,2,3],3)  => [3,6,9]
 //map([2,3,4],-2) => [-4,-6,-8]
 
 /**
  * @name: filter
- * @description
- * @param1:
- * @param2:
- * @return: a new collection with filtered elements
+ * @description filter elements in an array and return a a new collection with filtered elements
+ * @param1: array
+ * @return: array
  **/
-function filter(arr){
-
-}
+ function filter(arr){
+   return arr.filter(word => word.length > 4)
+ }
 
 /**
  * @name: reverseLettersInPlace
