@@ -124,9 +124,19 @@ function allSimpleCombinations(){
  * @param1: num
  * @return: boolean
  **/
-function isPrime(){
+ function isPrime(number) {
+   if (number < 2) {
+     return false;
+   }
 
-}
+   for (var i = 2; i < number; i++) {
+     if (number % i === 0) {
+       return false;
+     }
+   }
+
+   return true;
+ }
 //isPrime(7)  => true
 //isPrime(12) => false
 

@@ -132,8 +132,14 @@ describe('all tests for your functions',()=>{
 
   //isPrime
   describe('isPrime  tests', () => {
-    it('should return an array', () => {
+    const primeFunc = allFunctions.isPrime;
 
+    it('should return a true when the number is prime', () => {
+      assert.equal(primeFunc(3), true);
+    });
+
+    it('should return a false when the number is not prime', () => {
+      assert.equal(primeFunc(12), false);
     });
   })
 
