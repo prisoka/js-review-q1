@@ -70,6 +70,10 @@ describe('all tests for your functions',()=>{
   describe('map tests', () => {
     const mapFunc = allFunctions.map;
 
+    it('should iterate with all numbers in given array', () => {
+      assert.deepEqual(mapFunc([1,2],3),([3,6]))
+    });
+
     it('should return an array of numbers', () => {
       assert.deepEqual(mapFunc([1,2,3],2), ([2,4,6]));
     });
@@ -107,14 +111,10 @@ describe('all tests for your functions',()=>{
 
   //allSimpleCombinations
   describe('allSimpleCombinations tests', () => {
-    const simpleCombinations = allFunctions.allSimpleCombinations;
+    const simpleCombinationsFunc = allFunctions.allSimpleCombinations;
 
-    it('should return ...', () => {
-
-    });
-
-    it('should return ...', () => {
-
+    it('should output an array of strings', () => {
+      assert.equal(simpleCombinationsFunc('dog'), ['d', 'do', 'dog', 'o', 'og', 'g'])
     });
   })
 
@@ -153,16 +153,16 @@ describe('all tests for your functions',()=>{
     });
   })
 
-  //returnCoinBreakdown
-  describe('returnCoinBreakdown tests', (){
+  // returnCoinBreakdown
+  describe('returnCoinBreakdown tests', () => {
     const coinBreakdown = allFunctions.returnCoinBreakdown;
 
-    it('should return ...', () => {
-
+    it('should return 0 to object values if the given number is != 0', () => {
+      assert.equal(coinBreakdown(0), {25:0,10:0,5:0,1:0})
     });
 
-    it('should return ...', () => {
-
+    it('should return an object', () => {
+      assert.equal(coinBreakdown(3), {1:3})
     });
   })
 
