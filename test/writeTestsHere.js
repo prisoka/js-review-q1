@@ -114,7 +114,7 @@ describe('all tests for your functions',()=>{
     const simpleCombinationsFunc = allFunctions.allSimpleCombinations;
 
     it('should output an array of strings', () => {
-      assert.equal(simpleCombinationsFunc('dog'), ['d', 'do', 'dog', 'o', 'og', 'g'])
+      assert.deepEqual(simpleCombinationsFunc('dog'), (['d', 'do', 'dog', 'o', 'og', 'g']))
     });
   })
 

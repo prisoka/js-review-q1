@@ -77,9 +77,20 @@ function map(arr, num){
  * @param1: str
  * @return: array
  **/
-function allSimpleCombinations(){
+ function allSimpleCombinations(str){
+   let combined = [];
 
-}
+   for (let i = 0; i < str.length; i++){
+     let word = str[i];
+     // console.log(word);
+
+     for (let j = i; j < str.length; j++){
+       combined.push(word);
+       word += str[j+1];
+     }
+   }
+   return combined;
+ }
 //allSimpleCombinations('cat')  => ['c','ca','cat','a','at','t']
 //allSimpleCombinations('talk') => ['t','ta','tal','talk','a','al','alk','l','lk','k'];
 
