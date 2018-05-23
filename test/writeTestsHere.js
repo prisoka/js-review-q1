@@ -158,11 +158,11 @@ describe('all tests for your functions',()=>{
     const coinBreakdown = allFunctions.returnCoinBreakdown;
 
     it('should return 0 to object values if the given number is != 0', () => {
-      assert.equal(coinBreakdown(0), {25:0,10:0,5:0,1:0})
+      assert.deepEqual(coinBreakdown(0), {1:0, 5:0, 10:0, 25:0})
     });
 
     it('should return an object', () => {
-      assert.equal(coinBreakdown(3), {1:3})
+      assert.deepEqual(coinBreakdown(3), ({1:3, 5:0, 10:0, 25:0}))
     });
   })
 

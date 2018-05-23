@@ -155,9 +155,20 @@ function map(arr, num){
  * @param1: num
  * @return: object
  **/
-function returnCoinBreakdown(num){
+ function returnCoinBreakdown(num){
+   let countedCoins = {};
+   let spareChange = 0;
 
-}
+   countedCoins[25] = parseInt(num/25);
+     spareChange = num % 25;
+   countedCoins[10] = parseInt(spareChange/10);
+     spareChange = spareChange % 10;
+   countedCoins[5] = parseInt(spareChange/5);
+     spareChange = spareChange % 5;
+   countedCoins[1] = spareChange;
+
+   return countedCoins;
+ }
 //returnCoinBreakdown(46) => {25:1,10:1,5:2,1:1}
 //returnCoinBreakdown(19) => {25:0,10:1,5:1,1:4}
 
